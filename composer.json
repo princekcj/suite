@@ -165,8 +165,12 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+         "post-install-cmd": [
+        "chmod -R 775 bootstrap/cache"
+        ],
         "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
