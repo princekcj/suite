@@ -177,6 +177,8 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "sudo chmod -R 775 storage",
+            "sudo chmod -R 775 bootstrap/cache",
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta",
             "ssh-keygen -t rsa -b 4096 -f ./storage/id_rsa && mv ./storage/id_rsa ./storage/oauth-private.key && mv ./storage/id_rsa.pub ./storage/oauth-public.key",
