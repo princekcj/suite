@@ -167,7 +167,6 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "composer require laravel/ui --dev",
             "@php artisan ui bootstrap",
             "@php artisan package:discover --ansi"
         ],
