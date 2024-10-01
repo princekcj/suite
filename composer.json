@@ -167,8 +167,7 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "composer dump-autoload",
-            "composer install --no-scripts",
+            "composer update --no-scripts",
             "@php artisan package:discover --ansi"
         ],
         "post-root-package-install": [
