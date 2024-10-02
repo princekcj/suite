@@ -168,7 +168,10 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "mkdir -p bootstrap/cache",
-            "chmod -R 775 storage/app/ storage/framework/ storage/logs/ bootstrap/cache/",
+            "chmod -R 775 bootstrap/cache",
+            "chmod -R 775 storage/framework",
+            "chmod -R 775 storage/app",
+            "chmod -R 775 storage/logs",
             "@php artisan package:discover --ansi"
         ],
         "post-root-package-install": [
