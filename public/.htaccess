@@ -20,6 +20,7 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
+
 # 1 YEAR
 <FilesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav)$">
 Header set Cache-Control "max-age=31536000, public"
@@ -40,10 +41,11 @@ Header set Cache-Control "max-age=10800"
 Header set Cache-Control "max-age=0, private, no-store, no-cache, must-revalidate"
 </FilesMatch>
 
+
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # Images
+ # Images
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
@@ -71,9 +73,4 @@ Header set Cache-Control "max-age=0, private, no-store, no-cache, must-revalidat
   # Others
   ExpiresByType application/pdf "access plus 1 year"
   ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
-</IfModule>
-
-# Set a longer proxy timeout for requests
-<IfModule mod_proxy_fcgi.c>
-    ProxyTimeout 600
 </IfModule>
