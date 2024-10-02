@@ -169,7 +169,7 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "mkdir -p bootstrap/cache",
             "chmod -R 775 bootstrap/cache",
-            "sudo chown -R www-data:www-data bootstrap/cache"
+            "chown -R www-data:www-data bootstrap/cache"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
