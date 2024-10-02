@@ -45,11 +45,11 @@ return [
 
                 'mysql' => [
           'driver' => 'mysql',
-          'host' => env('STACKHERO_MYSQL_HOST'),
-          'port' => env('STACKHERO_MYSQL_PORT'),
-          'username' => env('STACKHERO_MYSQL_USER'),
-          'password' => env('STACKHERO_MYSQL_PASSWORD'),
-          'database' => env('STACKHERO_MYSQL_USER'),
+          'host' => env('DB_HOST'),
+          'port' => env('DB_PORT'),
+          'username' => env('DB_USERNAME'),
+          'password' => env('DB_PASSWORD'),
+          'database' => env('DB_DATABASE'),
           'charset' => 'utf8mb4',
           'collation' => 'utf8mb4_unicode_ci',
           'prefix' => '',
