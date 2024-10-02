@@ -427,11 +427,6 @@ class PublicUrlController extends Controller
 
         $smtpVerified = SmtpSetting::value('verified');
 
-        // Print all environment variables using print_r
-        echo '<pre>';
-        print_r($_ENV); // This will print all environment variables to the console
-        echo '</pre>';
-
         return [
             'app' => config('froiden_envato.envato_product_name'),
             'redirect_https' => config('app.redirect_https'),
