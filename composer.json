@@ -183,7 +183,8 @@
             "@php artisan ide-helper:meta",
             "chmod -R 775 storage/framework",
             "chmod -R 775 storage/app",
-            "chmod -R 775 storage/logs"
+            "chmod -R 775 storage/logs",
+            "@php artisan migrate --ansi"
         ]
     }
 }
