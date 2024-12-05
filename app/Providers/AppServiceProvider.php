@@ -45,6 +45,10 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(IdeHelperServiceProvider::class);
         }
 
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
+
         CarbonInterval::macro('formatHuman', function ($totalMinutes, $seconds = false): string {
 
             if ($seconds) {
