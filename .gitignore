@@ -5,7 +5,6 @@
 /public/user-uploads/*
 !public/user-uploads/.htaccess
 /storage/*.key
-/vendor
 
 .env.backup
 .phpunit.result.cache
